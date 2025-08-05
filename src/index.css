@@ -47,6 +47,20 @@ body {
   display: flex;
   gap: 2.4rem;
   justify-content: center;
+  overflow: auto;
+  min-height: calc(100vh - 7.2rem - 4.8rem);
+}
+
+/* Optional scrollbar styling */
+.box::-webkit-scrollbar,
+.list::-webkit-scrollbar {
+  width: 0.4rem;
+}
+
+.box::-webkit-scrollbar-thumb,
+.list::-webkit-scrollbar-thumb {
+  background-color: var(--color-background-100);
+  border-radius: 10px;
 }
 
 .box {
@@ -54,8 +68,9 @@ body {
   max-width: 42rem;
   background-color: var(--color-background-500);
   border-radius: 0.9rem;
-  overflow: scroll;
+  overflow: auto;
   position: relative;
+  max-height: 100%;
 }
 
 .loader {
@@ -138,7 +153,7 @@ body {
 .list {
   list-style: none;
   padding: 0.8rem 0;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .list-watched {
